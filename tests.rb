@@ -37,3 +37,11 @@ class CaffeineTest < MiniTest::Test
     assert trevor.alertness > 0.9
   end
 end
+
+class EspressoTest < MiniTest::Test
+  def espresso_alertness_test
+    nevor = Human.new "Nevor"
+    esp = Espresso.new "Espresso"
+    nevor.buy esp
+  end
+end

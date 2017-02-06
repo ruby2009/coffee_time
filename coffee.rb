@@ -15,5 +15,15 @@ attr_accessor :name, :full
     full == 0
   end
 
+end
 
+class Espresso < Coffee
+
+  def initialize(num)
+    super(num, 1)
+  end
+
+  def full?
+    full == 1
+  end
 end
