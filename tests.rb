@@ -39,9 +39,25 @@ class CaffeineTest < MiniTest::Test
 end
 
 class EspressoTest < MiniTest::Test
-  def espresso_alertness_test
+  def test_espresso_alertness_test
     nevor = Human.new "Nevor"
     esp = Espresso.new "Espresso"
     nevor.buy esp
+
+    nevor.drink!
+    assert esp.empty?
+    assert nevor.alertness > 0.35
+  end
+end
+
+class TeaTest < MiniTest::Test
+  def test_tea_alertness_test
+    evor = Human.new "Nevor"
+    tea = Tea.new "Green"
+    evor.buy tea
+
+    3.times { evor.drink! }
+    assert tea.empty?
+    assert evor.alertness > 0.25
   end
 end

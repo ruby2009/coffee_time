@@ -26,7 +26,7 @@ class Human
 
   def drink!
     item.full -= 1
-    self.alertness += 0.32
+    self.alertness += item.alert
   end
 
 end
