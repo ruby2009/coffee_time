@@ -32,7 +32,7 @@ end
 
 class Tea < Coffee
 
-  def initialize(name, num=3, awake=0.25)
+  def initialize(name, num=4, awake=0.25)
     @name = name
     @full = num
     @alert = awake

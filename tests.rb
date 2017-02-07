@@ -52,11 +52,11 @@ end
 
 class TeaTest < MiniTest::Test
   def test_tea_alertness_test
-    evor = Human.new "Nevor"
+    evor = Human.new "Evor"
     tea = Tea.new "Green"
     evor.buy tea
 
-    3.times { evor.drink! }
+    4.times { evor.drink! }
     assert tea.empty?
     assert evor.alertness > 0.25
   end
